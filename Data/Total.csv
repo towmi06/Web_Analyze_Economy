@@ -1,4 +1,4 @@
-STT,Country,Continents,Rate of users Internet (%),Mobile device usage (%),Revenue of ecommerce platforms (billion USD),Revenue of IT industry (billion USD),Funding in digital infrastructure (billion USD),Foreign investment capital (million USD),CREDIT and BANKING digital transformation ratio(%), Number of Enterprises Applying Digital Transformation (bussiness) ,Economic Growth Rate of Education (% GDP), Number of technology start up businesses ,Year
+STT,Country,Continents,Rate of users Internet (%),Mobile device usage (%),Revenue of ecommerce platforms (billion USD),Revenue of IT industry (billion USD),Funding in digital infrastructure (billion USD),Foreign investment capital (billion USD),CREDIT and BANKING digital transformation ratio(%), Number of Enterprises Applying Digital Transformation (bussiness) ,Economic Growth Rate of Education (% GDP), Number of technology start up businesses ,Year
 1,Algeria,Africa  ,20,97,0.5,0.8,0.1,1.5,0,12000,4.1,800,2014
 2,Angola,Africa  ,15,44.3,0.25,0.37,0.1,3.66,12.8,15000,3.5,170,2014
 3,Benin,Africa  ,13,55,0.12,0.07,0.1,0.41,0,10000,3.5,80,2014
