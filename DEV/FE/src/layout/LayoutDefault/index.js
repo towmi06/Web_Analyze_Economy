@@ -16,6 +16,8 @@ const { Content } = Layout;
 
 function LayoutDefault() {
   const token = getCookie("token");
+  const admin = getCookie("admin");
+
   useSelector(state => state.loginReducer);
 
   //Khởi tạo biến chứa giá trị nhận được khi chọn vào các mục của select
@@ -145,7 +147,7 @@ function LayoutDefault() {
       label: (
         <a href="#2" onClick={(e) => {
           e.preventDefault();
-          navigate("/", { state: { scrollTo: "divRef2" }});
+          navigate("/", { state: { scrollTo: "divRef2" } });
           scrollToDiv(divRef2);
         }}>
           Southeast Asia
@@ -157,7 +159,7 @@ function LayoutDefault() {
       label: (
         <a href="#asia" onClick={(e) => {
           e.preventDefault();
-          navigate("/", { state: { scrollTo: "divRefAsia" }});
+          navigate("/", { state: { scrollTo: "divRefAsia" } });
           scrollToDiv(divRefAsia)
         }}>
           Asia
@@ -169,7 +171,7 @@ function LayoutDefault() {
       label: (
         <a href="#america" onClick={(e) => {
           e.preventDefault();
-          navigate("/", { state: { scrollTo: "divRefAmerica" }});
+          navigate("/", { state: { scrollTo: "divRefAmerica" } });
           scrollToDiv(divRefAmerica);
         }}>
           America
@@ -181,7 +183,7 @@ function LayoutDefault() {
       label: (
         <a href="#europe" onClick={(e) => {
           e.preventDefault();
-          navigate("/", { state: { scrollTo: "divRefEurope" }});
+          navigate("/", { state: { scrollTo: "divRefEurope" } });
           scrollToDiv(divRefEurope);
         }}>
           Europe
@@ -193,7 +195,7 @@ function LayoutDefault() {
       label: (
         <a href="#africa" onClick={(e) => {
           e.preventDefault();
-          navigate("/", { state: { scrollTo: "divRefAfrica" }});
+          navigate("/", { state: { scrollTo: "divRefAfrica" } });
           scrollToDiv(divRefAfrica);
         }}>
           Africa
@@ -214,7 +216,7 @@ function LayoutDefault() {
               <div className="header_link">
                 <Button onClick={(e) => {
                   e.preventDefault();
-                  navigate("/", { state: { scrollTo: "divRef1" }});
+                  navigate("/", { state: { scrollTo: "divRef1" } });
                   scrollToDiv(divRef1);
                 }}>CHART</Button>
                 <Dropdown
@@ -242,12 +244,14 @@ function LayoutDefault() {
                       <div className="name-icon">ANALYZE</div>
                     </NavLink>
                   </li>
-                  <li>
-                    <NavLink to={"/dataupdate"}>
-                      <GoDatabase />
-                      <div className="name-icon">DATA</div>
-                    </NavLink>
-                  </li>
+                  {admin === "true" &&
+                    <li>
+                      <NavLink to={"/dataupdate"}>
+                        <GoDatabase />
+                        <div className="name-icon">DATA</div>
+                      </NavLink>
+                    </li>
+                  }
                   <div className="filter">
                     <Dropdown
                       zIndex={1000}
@@ -289,7 +293,7 @@ function LayoutDefault() {
           </header>
           <Layout className="layout">
             <Content className="content">
-              <DataContext.Provider value={{changeYear, changeContinents, changeCountry, divRef1, divRef2, divRefAsia, divRefAmerica, divRefEurope, divRefAfrica, scrollToDiv}}>
+              <DataContext.Provider value={{ changeYear, changeContinents, changeCountry, divRef1, divRef2, divRefAsia, divRefAmerica, divRefEurope, divRefAfrica, scrollToDiv }}>
                 <Outlet />
               </DataContext.Provider>
             </Content>

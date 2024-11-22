@@ -6,7 +6,6 @@ import { updateData } from "../../services/data.Services";
 import { getCookie } from "../../helpers/cookie";
 
 function EditData() {
-  const admin = getCookie("admin");
 
   const { record, handleReload } = useContext(dataContinents);
   const [showmodal, setShowModal] = useState(false);
@@ -45,10 +44,7 @@ function EditData() {
   return (
     <>
       {contextHolder}
-      {admin === "true" ? (<Button type="primary" icon={<EditOutlined />} onClick={handleShowModal} size="small"  />)
-        : (<Button type="primary" icon={<EditOutlined />} onClick={handleShowModal} size="small"  disabled={true}/>)
-      }
-      
+      <Button type="primary" icon={<EditOutlined />} onClick={handleShowModal} size="small"  />   
       <Modal open={showmodal} onCancel={handleCancel} title={`Chỉnh sửa dữ liệu nước ${record.Name}`} footer={null} >
         <Spin spinning={spinning} tip="Đang cập nhật" >
           <Form layout="vertical" name={`create-data-${record._id}`} onFinish={handleSubmit} form={form} initialValues={record} >
