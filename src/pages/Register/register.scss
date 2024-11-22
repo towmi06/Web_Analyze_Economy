@@ -1,0 +1,105 @@
+.container-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-form-register {
+    position: fixed;
+    display: flex;
+    top: 150px;
+    align-items: center;
+    background: #fff;
+    width: 750px;
+    height: 485px;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 0px 3px 0 rgba(0, 0, 0, 0.12);
+
+    .form-register {
+      width: 350px;
+      padding: 30px;
+      height: 100%;
+
+      .title-register {
+        font-size: 28px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      .label-register{
+        font-size: 16px;
+        margin: 5px;
+        font-weight: 600;
+      }
+      .input-register {
+        width: 290px;
+        height: 40px;
+        border-radius: 20px;
+        padding: 15px;
+        border: none;
+        background: #dddddd75;
+        outline: none;
+        margin-bottom: 10px;
+      }
+
+      .btn-register{
+        width: 290px;
+        height: 35px;
+        border-radius: 24px;
+        border: none;
+        margin-top: 10px;
+        background: -webkit-linear-gradient(-30deg, #17D4E6, #0c969c 100%);
+        color: #fff;
+
+        &:hover{
+          transition: 0.8s;
+          background: -webkit-linear-gradient(-30deg, #17d5e6b7, #0c959cac 100%);
+        }
+      }
+    }
+
+    .content-right-register {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 20px;
+      background: -webkit-linear-gradient(-30deg, #17D4E6, #0c969c 100%);
+
+      .title-content-register{
+        font-size: 32px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .question-register{
+        font-size: 15px;
+        font-weight: 550;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .navigate-register{
+        border: 1px solid #fff;
+        background: -webkit-linear-gradient(-30deg, #17D4E6, #0c969c 100%);
+        height: 35px;
+        width: 70px;
+        border-radius: 20px;
+
+        &:hover{
+          background: #fff;
+          transition: 0.8s;
+          a{
+            color:#17D4E6;
+          }
+        }
+        a{
+          color:#fff;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

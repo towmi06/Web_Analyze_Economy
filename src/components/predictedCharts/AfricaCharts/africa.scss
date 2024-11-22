@@ -1,0 +1,50 @@
+.container-af{
+  background: rgba(214, 236, 254, 0.4);
+  min-height: 412px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &__text{
+    text-align: justify;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0 15px 15px;
+
+    &--content{
+      text-indent: 20px;
+      margin-bottom: 10px;
+
+      &::first-letter{
+        font-size: 30px;
+      }
+    }
+
+    h3{
+      margin: 0;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .chartsaf-predicted{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .chartaf{
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+    }
+    .chartaf-name{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
